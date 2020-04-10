@@ -1,4 +1,6 @@
 # reddit-lite
+[![Build Status](https://travis-ci.org/jamesbarnett91/reddit-lite.svg?branch=master)](https://travis-ci.org/jamesbarnett91/reddit-lite)
+
 Available at [reddit.jamesbarnett.io](https://reddit.jamesbarnett.io)
 
 A lightweight, minimal, readonly Reddit client, designed for mobile devices or slow connections.
