@@ -1,0 +1,143 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+}
+
+p {
+  margin: 5pt 0pt;
+}
+
+.header {
+  background-color: #c0c0c0;
+  display: table;
+}
+
+.subreddit-title {
+  font-weight: bold;
+  font-size: 15pt;
+  padding: 4pt 10pt;
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.header-links {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.header-links a {
+  color: #000000;
+}
+
+.post-list {
+  display: table;
+  border-spacing: 5pt;
+}
+
+.no-list-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post {
+  color: #828282;
+  display: table-row;
+}
+
+.post-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.post-thumbnail {
+  display: table-cell;
+  vertical-align: top;
+  width: 100px;
+  height: auto;
+}
+
+.post-title {
+  color: #000000;
+  text-decoration: none;
+}
+
+.post-domain {
+  font-size: 8pt;
+}
+
+.post-info {
+  font-size: 7pt;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.next-page-link {
+  padding: 10pt;
+}
+
+.post-summary {
+  padding: 10pt 5pt;
+}
+
+.subreddit-link {
+  color: #828282;
+}
+
+.post-selftext {
+  padding: 0pt 15pt;
+}
+
+.comments {
+  padding: 10pt 5pt;
+}
+
+.comment-heading {
+  padding-left: 5pt;
+}
+
+.comment {
+  margin-bottom: 10pt;
+}
+
+.comment.child {
+  margin-left: 10pt;
+}
+
+.comment-details {
+  font-size: 8pt;
+  color: #828282;
+}
+
+summary {
+  outline: none;
+  margin-bottom: -5pt;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5pt solid #ccc;
+  margin: 10pt 10pt 5pt;
+  padding: 2pt 10pt;
+}
+
+pre {
+  background: #f9f9f9;
+  font-size: 8pt;
+  padding: 2pt 10pt;
+}
+
+.landing-desc {
+  padding: 10pt 5pt;
+  font-size: 10pt;
+}
