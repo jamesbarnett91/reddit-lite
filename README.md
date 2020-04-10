@@ -1,19 +1,24 @@
 # reddit-lite
-Demo [here](https://reddit.james-barnett.net)
+Available at [reddit.jamesbarnett.io](https://reddit.jamesbarnett.io)
 
 A lightweight, minimal, readonly Reddit client, designed for mobile devices or slow connections.
-![comments](https://james-barnett.net/files/reddit-lite/screenshots/rl3.png)
+![comments](https://jamesbarnett.io/files/reddit-lite/screenshots/rl3.png)
 
 ## Running locally
-Reddit-lite is written in [play](https://www.playframework.com/).
-Running a non distribution version requires [sbt](http://www.scala-sbt.org/index.html) (which sucks btw).
+Reddit-lite is written in Kotlin using the [Spring Boot](https://spring.io/projects/spring-boot) framework.
+You will need Java 8 or later to run it.
 
 ```sh
 git clone https://github.com/jamesbarnett91/reddit-lite && cd reddit-lite
-mv conf/application.conf.sample conf/application.conf
-sbt run
+./gradlew run
 ```
-Alternatively, just use IntelliJ with the scala plugin and import the project.
+Alternatively, you can pull the `jbarnett/reddit-lite` docker image and run that.
+```sh
+docker run --name reddit-lite -d -p 8080:8080 jbarnett/reddit-lite
+```
+Then navigate to `localhost:8080` in your browser.
+
+Or go to [reddit.jamesbarnett.io)](https://reddit.jamesbarnett.io) for a hosted version.
 
 ## TODOs
 * ~~option to hide thumbnails~~ [done]
@@ -23,5 +28,4 @@ Alternatively, just use IntelliJ with the scala plugin and import the project.
 * view subreddit info/sidebar
 * highlight gilded posts/comments
 * highlight comments from OP
-* clean up css and maybe inline it to save an http request
 * should probably write some tests...
