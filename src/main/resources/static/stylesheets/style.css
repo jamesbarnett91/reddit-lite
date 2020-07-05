@@ -24,9 +24,6 @@ p {
   padding: 4px 10px;
   text-decoration: none;
   color: #000000;
-  white-space: normal;px;
-}
-  word-break: normal;
 }
 
 .header-links {
@@ -141,7 +138,6 @@ pre {
 
 .landing-desc {
   padding: 10px 5px;
-  font-size: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -184,6 +180,10 @@ pre {
 
   .comment-text {
     opacity: 0.87;
+  }
+
+  .landing-desc {
+    opacity: 0.87
   }
 
   a {
