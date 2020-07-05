@@ -7,7 +7,9 @@
     <@postSummary postDetail.post/>
   </div>
 
-  ${(postDetail.selftextHtmlUnescaped?no_esc)!""}
+  <div class="post-selftext">
+    ${(postDetail.selftextHtmlUnescaped?no_esc)!""}
+  </div>
 
   <div class="comment-heading"><@pluralise postDetail.commentCount, "comment"/></div>
   <div class="comments">

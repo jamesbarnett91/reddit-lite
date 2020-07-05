@@ -13,7 +13,15 @@
 
 <#macro header subreddit>
   <div class="header">
-    <a class="subreddit-title" href="/r/${subreddit}">/r/${subreddit}</a>
+    <a class="subreddit-title" href="/r/${subreddit}">
+      <#if subreddit?contains("+")>
+        <#list subreddit?split("+") as multiRedditName>
+          <#if multiRedditName?is_first>/r/<#else>+</#if>${multiRedditName}
+        </#list>
+      <#else>
+        /r/${subreddit}
+      </#if>
+    </a>
     <span class="header-links">
       <#nested>
     </span>
