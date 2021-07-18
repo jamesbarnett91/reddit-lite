@@ -140,8 +140,19 @@ pre {
   padding: 10px 5px;
 }
 
-@media (prefers-color-scheme: dark) {
+.sort-section {
+  padding: 10px 5px;
+}
 
+.sort-section ul {
+  list-style: none;
+}
+.sort-section li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
   body {
     color: #fff;
     background-color: #121212;
@@ -153,21 +164,21 @@ pre {
 
   .post-title {
     color: #fff;
-    opacity: 0.87
+    opacity: 0.87;
   }
 
   .post-domain {
     color: #fff;
-    opacity: 0.6
+    opacity: 0.6;
   }
 
   .post-info {
     color: #fff;
-    opacity: 0.6
+    opacity: 0.6;
   }
 
   .post-selftext {
-    opacity:0.87;
+    opacity: 0.87;
   }
 
   .subreddit-link {
@@ -183,7 +194,7 @@ pre {
   }
 
   .landing-desc {
-    opacity: 0.87
+    opacity: 0.87;
   }
 
   a {
@@ -199,5 +210,4 @@ pre {
     color: #fff;
     background: rgba(255, 255, 255, 0.16);
   }
-
 }

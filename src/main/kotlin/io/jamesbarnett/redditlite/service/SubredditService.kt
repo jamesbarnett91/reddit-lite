@@ -36,6 +36,15 @@ class SubredditService (restTemplateBuilder: RestTemplateBuilder) {
       .map { objectMapper.treeToValue(it, Post::class.java) }
   }
 
+  fun getPostsSorted(subreddit: String,sort: String, postsAfterId: String?): List<Post> {
+    val jsonResponse = restTemplate.getForObject("${REDDIT_API_ROOT_URL}${subreddit}/${sort}/.json${if (postsAfterId != null) "?after=${postsAfterId}" else ""}", String::class.java)
+    return objectMapper.readTree(jsonResponse)
+      .path("data")
+      .path("children")
+      .findValues("data")
+      .map { objectMapper.treeToValue(it, Post::class.java) }
+  }
+
   fun getPostDetail(subreddit: String, postId: String): PostDetail {
     val jsonResponse = restTemplate.getForObject("${REDDIT_API_ROOT_URL}${subreddit}/comments/${postId}/.json", String::class.java)
     val rootNode = objectMapper.readTree(jsonResponse)
