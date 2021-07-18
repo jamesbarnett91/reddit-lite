@@ -26,6 +26,22 @@ class SubredditController (val subredditService: SubredditService) {
         .addObject("nextPostId", posts.last().name)
   }
 
+  @GetMapping("/{subreddit}/{sort}")
+  fun renderPostsSorted(@PathVariable subreddit: String,
+                  @PathVariable sort: String,
+                  @RequestParam("after", required = false) postAfterId: String?,
+                  @RequestParam("showThumbs", defaultValue = "true") showThumbs: Boolean
+  ): ModelAndView {
+    val posts = subredditService.getPostsSorted(subreddit,sort, postAfterId)
+    return ModelAndView("posts")
+        .addObject("showThumbs", showThumbs)
+        .addObject("postAfterId", postAfterId)
+        .addObject("subreddit", subreddit)
+        .addObject("posts", posts)
+        .addObject("nextPostId", posts.last().name)
+  }
+
+
   @GetMapping("/{subreddit}/comments/{postId}")
   fun renderPostDetail(@PathVariable subreddit: String, @PathVariable postId: String): ModelAndView {
     val postDetail = subredditService.getPostDetail(subreddit, postId)
